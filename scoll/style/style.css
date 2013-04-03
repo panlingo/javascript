@@ -1,0 +1,49 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding: 0; margin: 0; }
+fieldset, img { border: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+ol, ul { list-style: none; }
+address, caption, cite, code, dfn, em, th, var { font-weight: normal; font-style: normal; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+q:before, q:after { content: ''; }
+abbr, acronym { border: 0; }
+body { background:#fff; color:#333; font-family:"宋体", Arial, sans-serif; font-size:12px; }
+h1 { display:none; }
+.main { width:950px; margin:0 auto; }
+a { text-decoration:none; color:#333; }
+a:hover { text-decoration:underline; color:#d00; }
+/*Layout*/
+.fL { float:left; }
+.fR { float:right; }
+.adv { text-align:center; margin-bottom:10px; }
+.adv img { vertical-align:top; }
+.view, .photo { min-height:100px; _height:100px; margin-bottom:10px; padding-bottom:6px; border:1px solid #ccc; }
+.view li, .photo li { float:left; width:172px; text-align:center; }
+.view dt { height:172px; padding-bottom:3px; }
+.view dt { background:url(http://www.titan24.com/comstyles/vpbg.gif) top center no-repeat; }
+.view dd { text-align:center; line-height:20px; }
+.view dt a { display:block; width:160px; height:160px; padding:5px; *font-size:142px;
+line-height:152px; *line-height:158px;
+overflow:hidden; text-align:center; }
+.view dt img { vertical-align:middle; padding:0; display:inline; border:none; }
+.photo li img { width:150px; height:115px; display:block; margin:0 auto 6px; padding:4px; border:1px solid #ccc; }
+.photo li a:hover { text-decoration:none; }
+/*rolling box*/
+.rolb h2 { padding-left:14px; line-height:24px; float:none; clear:both; }
+.rollcon { min-height:100px; _height:100px; padding-left:24px; position:relative; }
+.rollcon li { padding:0 4px; }
+.rollcon dl { float:none; margin:0; }
+.gol, .gor { position:absolute; top:0; width:19px; height:170px; text-indent:-500em; overflow:hidden; display:block; cursor:pointer; background:url(http://www.titan24.com/comstyles/golr.gif) no-repeat; }
+.gol { background-position:0 0; left:4px; }
+.gor { background-position:-20px 0; right:4px; }
+.photo .gol, .photo .gor { height:124px; border:solid #ccc; border-width:1px 0; }
+.photo .gol { background-position:0 -16px; }
+.photo .gor { background-position:-20px -16px; }
+/*垂直样式*/
+.rolc { width:200px; }
+.rolc h2 { height:20px; line-height:20px; margin:5px 0; padding: 0 0 0 10px; }
+.rolc .rollcon { padding-left:0; }
+.up, .down { width:169px; height:19px; margin:0 auto; text-indent:-500em; overflow:hidden; display:block; cursor:pointer; background:url(img/bg.gif) no-repeat; }
+.up { margin-bottom:10px; }
+.down { margin-top:10px; background-position:0 -20px; }
+#roll2 { padding-left:8px; }
