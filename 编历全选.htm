@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<ul id="ullist">
+	<li>
+    	<input type="checkbox" name="chx0" value="0" />
+    </li>
+    <li>
+    	<input type="checkbox" name="chx1" value="1" />
+    </li>
+    <li>
+    	<input type="checkbox" name="chx2" value="2" />
+    </li>
+    <li>
+    	<input type="checkbox" name="chx3" value="3" />
+    </li>
+    <li>
+    	<input type="checkbox" name="chx4" value="4" />
+    </li>
+</ul>
+
+<label><input type="checkbox" id="selectAll" name="selectAll" value="all" /><span id="selectText">全选</span></label>
+
+<script type="text/javascript">
+window.onload = init;
+function init() {
+	var selectAll = document.getElementById("selectAll");
+	selectAll.onclick = selectAllClick;
+}
+function selectAllClick() {
+	var selectText = document.getElementById("selectText");
+	var inputs = document.getElementById("ullist").getElementsByTagName("input");
+	for (var i = 0; i < inputs.length; i++) {
+		if (inputs[i].checked == false) {
+			inputs[i].checked = true;
+			selectText.innerHTML = "全不选";		
+		} else {
+			inputs[i].checked = false;
+			selectText.innerHTML = "全选";
+		}
+	}
+}
+</script>
+</body>
+</html>
