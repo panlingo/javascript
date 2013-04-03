@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+#tab { width:300px; height:200px; border:5px #F00 solid; background:#CCC; }
+#tab h1 a.on { background:#00F; }
+#tab div { height:100px; border:3px #0F0 solid; }
+.none { display:none; }
+.block { display:block; }
+</style>
+</head>
+
+<body>
+<div id="tab">
+	<h1 id="tabH1">
+    	<a href="#" class="on">菜单一</a>
+        <a href="#">菜单二</a>
+    </h1>
+    <div>内容体一</div>
+    <div class="none">内容体二</div>
+</div>
+<input type="button" value="测试" name="aa" onclick="falert()" />
+
+<FORM>
+姓名：
+<INPUT TYPE="text" NAME="names">
+<INPUT TYPE="button" VALUE="请单击" onClick=alert("谢谢你，"+this.form.names.value)>
+</FORM>
+
+
+
+
+<script type="text/javascript">
+/*var as = document.getElementById("tabH1").getElementsByTagName("a");
+alert(as.length);*/
+window.status = "小米猪";
+
+//document.getElementById("tab").onclick = falert();
+function falert() {
+	alert("你点击了我！！");
+	alert(screen.width);
+	alert(screen.height);
+	document.title += " 我是小米猪";
+	window.close();
+}
+</script>
+</body>
+</html>

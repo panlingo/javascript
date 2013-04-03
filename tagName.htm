@@ -1,0 +1,17 @@
+<input type="button" value="click me" id="btn" />
+<span id="span">hello world</span>
+
+<script type="text/javascript">
+document.getElementById("btn").onclick = function(e){
+	e = window.event || e;
+	var el = e.srcElement || e.target;
+	alert(el.tagName);
+	var ele = el.tagName;
+	alert(ele.id);
+}
+document.getElementById("span").onclick = function(e){
+	e = window.event || e;
+	var el = e.srcElement || e.target;
+	alert(el.tagName);
+}
+</script>
