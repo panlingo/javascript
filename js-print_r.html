@@ -1,0 +1,39 @@
+做JavaScript开发, 特别是稍微复杂一点的程序, 难免要用到JavaScript面对对象的特性, 现在JavaScript的调试工具逐渐多和强大起来, 然而有时候要看一个object的值, 还是很不方便, 这时候就开始想念php的print_r功能了, 它可以将数组和对象的皮剥得干干净净, 让你看得一清二楚.
+<script>
+function print_r(o){
+    function print(o,i){
+        i = i || 0;  // how many tabs
+        var color = '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).substr(-6); 
+        // randomly generate a color
+        var indent = '|    '
+        // form of a tab, you can use '|\t' instead
+ 
+        var space = '';
+        for( var k=0; k<i; k++ ){
+            space += indent;
+        }
+        var ret = '';
+        for( var name in o ){
+            var val = o[name];   
+            ret += space + '<font style="color:' + color + '">' + name + " => "+ typeof(val) +'( </font>';
+            if( typeof val == 'object' ){
+                ret += '\n'+print(val,i+1);
+                ret += space;
+            } else if( typeof val == 'function' ){
+                ret += '\n' + space + indent + val.toString().replace(/\n/g, '\n'+space+indent) + '\n'+space;
+            } else
+                ret += val + ' ' ;
+            ret += '<font style="color:' + color + '">' + ')</font>\n';
+        }
+        return ret;
+    }
+    if( typeof o == 'object' )
+        return '<pre>'+print(o)+'</pre>';  //use pre to prevent structure destruction
+    else
+        return o;
+}
+var arr = [11, 22, 33];
+var obj = {'fitst':'aaa', 'sec':['cc', 'dd']};
+document.write(print_r(arr));
+document.write(print_r(obj));
+</script>
